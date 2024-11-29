@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body id="inicio">
+    
+    <div class="titulo"><h1>Exercícios</h1>        
+    </div>
+
+    <button id="voltar"><a href="#inicio" class="inicio">inicio</a></button>
+
+    <div class="botao">
+        <button id="adivinha"> <a href="#adivinhacao" >Jogo de Adivinhação</a></button>
+        <button id="ano"> <a href="#bissexto">Ano Bissexto</a></button>
+        <button id="media"> <a href="#mediaEscola">Média Escolar</a></button>
+        <button id="gorjeta"> <a href="#calcGorjeta">Calculadora de Gorjeta</a></button>
+        <button id="saudacao"> <a href="#cumprimento">Saudação pelo Horário</a></button>
+    </div> 
+
+    <div class="Jogo">
+
+        <h2 id="adivinhacao">Jogo de adivinhação</h2>
+            <button class="butao1" id="iniciar" onclick="
+            let numerosecreto=Math.floor(Math.random()*10);
+            let chute = prompt('Escolha um número entre 0 a 10: ');
+        
+            if (chute==numerosecreto) {
+                alert('Parabéns, você acertou!!')
+            } else {
+                alert(`Você errou, o número secreto era ${numerosecreto}`)
+            };
+            ">Clique para jogar</button>
+    <!---------------------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------------------->
+
+        <h2 id="bissexto">Ano Bissexto</h2>
+            <button class="butao2" id="iniciar" onclick="
+            let anoEscolhido = Number(prompt('Qual seu ano escolhido? '))
+
+            if(anoEscolhido % 4 === 0 && anoEscolhido % 100 !== 0 || anoEscolhido % 400 === 0){
+                alert('O ano é bissexto!')
+            }
+            else{
+                alert('O ano não é bissexto')
+            }
+            ">Clique para jogar</button>
+
+    <!---------------------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------------------->
+
+        <h2 id="mediaEscola">Média Escolar</h2>
+            <button class="butao3" id="iniciar" onclick="
+            let nome1 = prompt('Digite o nome do aluno: ')
+            let nota1 = Number(prompt('Digite a primeira nota: '))
+            let nota2 = Number(prompt('Digite a segunda nota: '))
+            let nota3 = Number(prompt('Digite a terceira nota: '))
+            let nota4 = Number(prompt('Digite a quarta nota: '))
+            let resultado
+            media = ( (nota1+nota2+nota3+nota4) /4 ).toFixed(2)
+            
+            if(media < 5)
+                {alert ('REPROVADO POR NOTA')}
+            else if( media >= 5 && media < 7 )
+                {alert('RECUPERAÇÃO')}
+            else 
+                {alert('APROVADO')}">Clique para jogar</button>
+
+    <!---------------------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------------------->
+
+        <h2 id="calcGorjeta">Calculadora de Gorjeta</h2>
+            <button class="butao4" id="iniciar" onclick="
+            let conta = Number(prompt('Qual o valor da conta?'));
+            let satisfacao = prompt('Sua satisfação foi boa, ótima ou excelente?');
+            
+            let boa = (conta*0.1+conta).toFixed(2);
+            let ótima = (conta*0.15+conta).toFixed(2);
+            let excelente = (conta*0.2+conta).toFixed(2);
+
+            if(satisfacao=boa){
+                alert('Sua conta ficou em ' + boa + ' reais')
+            }
+            else if(satisfacao=ótima){
+                alert('Sua conta ficou em ' + ótima + ' reais')
+            }
+            else if(satisfacao=excelente){
+                alert('Sua conta ficou em ' + excelente + ' reais')
+            }
+            ">Clique para jogar</button>
+
+
+    <!---------------------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------------------->
+        <h2 id="cumprimento">Saudação pelo Horário</h2>
+            <button class="butao5" id="iniciar" onclick="
+            let nome = prompt('Digite seu nome: ')
+            let horario = prompt('É manhã, tarde ou noite ? ')
+            
+            if(horario =='tarde'){
+                alert('Boa tarde, '+ nome)
+            }else if(horario ==manha) {
+                alert('Bom dia, '+ nome)
+            }else if(horario ==noite){
+                alert('Boa noite, ' + nome)
+            }else {
+                alert('???')
+            }">Clique para jogar</button>
+
+    </div>
+
+</body>
+</html>
