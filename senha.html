@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="senha.css">
+</head>
+<body>
+    <button id="voltar"><a href="index.html" class="inicio">inicio</a></button>
+
+    <h1 id="titulo">Insira uma senha</h1>
+    <div id="elementos"><input type="password" id="senha1">
+    <button id="botao" onclick="
+    let senhaCorreta = 'SenaiMooca'
+    let senha2 = document.getElementById('senha1').value
+
+    if(senha2==senhaCorreta){
+        document.getElementById('resultado').innerText=('Senha válida')
+    }else{
+        document.getElementById('resultado').innerText=('Senha inválida')
+    }
+    ">Verifique senha</button></div>
+    <h1 id="resultado"></h1>
+    <script></script>
+</body>
+</html>

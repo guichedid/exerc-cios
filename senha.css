@@ -1,0 +1,48 @@
+body{
+    background-image: linear-gradient(to right, red, white, black);
+}
+
+h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#titulo{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    margin-top: 80px;
+}
+
+#elementos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#voltar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    position: fixed; 
+    top: 3%;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:focus, a:active {
+    outline: none;
+  }
+
+  
